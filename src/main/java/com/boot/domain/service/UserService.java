@@ -11,13 +11,26 @@ import org.springframework.transaction.annotation.Transactional;
 import com.boot.domain.entity.account.User;
 import com.boot.domain.repository.account.IUserRepository;
 
+/**
+ * 
+ * @author Eduardo
+ * 
+ * Service responsável por fazer operações relacionadas ao usuário
+ *
+ */
 @Service
 @Transactional
 public class UserService implements UserDetailsService {
 
+	/**
+	 * Para gerar as queries
+	 */
 	@Autowired
 	private IUserRepository userRepository;
 	
+	/**
+	 * Busca um usuário através do campo login
+	 */
 	@Transactional(readOnly = true)
 	@Override
 	public UserDetails loadUserByUsername(

@@ -3,6 +3,13 @@ package com;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * 
+ * @author Eduardo
+ *
+ * Starter da aplicação
+ *
+ */
 @SpringBootApplication
 public class BootApplication {
 

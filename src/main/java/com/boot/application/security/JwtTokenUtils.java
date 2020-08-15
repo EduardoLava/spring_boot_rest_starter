@@ -18,6 +18,13 @@ import org.springframework.stereotype.Component;
 
 import com.boot.application.config.AppConfig;
 
+/**
+ * 
+ * @author Eduardo
+ * 
+ * Classe responsável pela criação e validação de um token
+ *
+ */
 @Component
 public class JwtTokenUtils {
 	
@@ -28,7 +35,7 @@ public class JwtTokenUtils {
 	
 	private Key key;
 
-	/*
+	/**
 	 * Gera uma key para posterior criação dos tokens
 	 */
 	private Key getKey(){

@@ -19,16 +19,32 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import com.boot.domain.service.UserService;
 
 
+/**
+ * 
+ * @author Eduardo
+ * 
+ * Filter responsável pela validação do token nos requests
+ *
+ */
 public class JwtAuthenticatorFilter extends OncePerRequestFilter {
 
 	private static final Logger logger = Logger.getLogger(JwtAuthenticatorFilter.class.getName()); 
 	
+	/**
+	 * Para validar o token
+	 */
 	@Autowired
 	private JwtTokenUtils tokenUtils;
 	
+	/**
+	 * Para realizar autenticação 
+	 */
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * Método responsável por filtrar os requests identificando o usuário que está tentando fazer algum request
+	 */
 	@Override
 	protected void doFilterInternal(HttpServletRequest request,
 		HttpServletResponse response, 
@@ -58,6 +74,11 @@ public class JwtAuthenticatorFilter extends OncePerRequestFilter {
 		
 	}
 	
+	/**
+	 * 
+	 * @param request
+	 * @return token enviado no requst através do header Authorization 
+	 */
 	private String resolveToken(HttpServletRequest request) {
 		
 		logger.info("JwtAuthenticatorFilter.resolveToken()");

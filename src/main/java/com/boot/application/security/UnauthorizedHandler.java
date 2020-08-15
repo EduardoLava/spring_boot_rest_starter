@@ -9,6 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
+/**
+ * 
+ * @author Eduardo
+ * 
+ * Handler padrão para quando o usuário for inválido
+ *
+ */
 @Component
 public class UnauthorizedHandler implements AuthenticationEntryPoint {
 

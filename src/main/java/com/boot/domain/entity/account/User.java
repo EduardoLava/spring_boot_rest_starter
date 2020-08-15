@@ -75,6 +75,9 @@ public class User extends BaseEntity implements UserDetails  {
 	@Column(nullable=false)
 	private Boolean isActive;
 
+	@Transient
+	private String tokenJwt;
+	
 //	----------------------------------------------
 //	---------------- behaviors ------------------------------
 //	----------------------------------------------

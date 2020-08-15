@@ -25,18 +25,38 @@ import com.boot.domain.entity.account.Login;
 import com.boot.domain.entity.account.User;
 
 
+/**
+ * 
+ * @author Eduardo
+ * 
+ * Rest controller utilizada para realização de login de um usuário
+ *
+ */
 @RestController
 @RequestMapping("/api/user")
 public class AuthRestController {
 
 	private static final Logger logger = Logger.getLogger(AuthRestController.class.getName());
 	
+	/**
+	 * Para realizar a validação do login e senha do usuário
+	 */
 	@Autowired
 	private AuthenticationManager authenticationManager;
 	
+	/**
+	 * Para gerenciar o token
+	 */
 	@Autowired
 	private JwtTokenUtils tokenUtils;
 	
+	/**
+	 * Realiza a autenticação de um usuário através da api
+	 * 
+	 * @param login
+	 * @param httpServletResponse
+	 * @return usuário autenticado com seu token de acesso
+	 */
 	@SuppressWarnings("rawtypes")
 	@PostMapping(
 		value = "/login", 
@@ -68,10 +88,8 @@ public class AuthRestController {
 			
 			Assert.notNull(pessoaLogada, "Login ou senha inválidos");
 			
-//			pessoaLogada.setTokenJwt(token);
-//			
-//			pessoaLogada = accountService.updatePessoa(pessoaLogada);
-//			
+			pessoaLogada.setTokenJwt(token);
+			
 			System.out.println(token);
 			
 			return new ResponseEntity<User>(pessoaLogada, HttpStatus.OK);

@@ -21,6 +21,13 @@ import com.boot.domain.service.UserService;
 
 //https://bezkoder.com/spring-boot-jwt-authentication/
 
+/**
+ * 
+ * @author Eduardo
+ * 
+ * Configurações principais para o spring security
+ * 
+ */
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)

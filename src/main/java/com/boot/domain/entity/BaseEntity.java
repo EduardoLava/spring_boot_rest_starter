@@ -16,8 +16,8 @@ import lombok.Setter;
 
 /**
  * 
- * @author Edu
- * base para todas as entidades
+ * @author Eduardo
+ * Base para todas as entidades
  *
  */
 @SuppressWarnings("serial")
