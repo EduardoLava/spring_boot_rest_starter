@@ -1,0 +1,39 @@
+# SETTINGS
+app:
+#  secret e token validity = jwt 
+  token-validity-in-seconds: 3600
+
+server: 
+  port: 8080
+  servlet: 
+    context-path: /boot
+
+#GENERAL
+spring:
+  application.name: your_db
+
+  
+#DATA SOURCE  
+  datasource:
+    url: jdbc:mysql://localhost/ef_controll?serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: your_user
+    password: your_password
+    
+#JPA
+  jpa:
+    hibernate.ddl-auto: create
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+      hibernate.default_schema: public
+      
+#FLYWAY
+spring.flyway:
+  enabled: true
+  check-location: true
+  schemas: public
+  locations: classpath:db/migration
+  baseline-on-migrate: true
+  sql-migration-prefix:      
+  
