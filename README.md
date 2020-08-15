@@ -1,3 +1,14 @@
+# Objetivo
+
+Este projeto tem por objetivo ser a base para criação de qualquer projeto Java onde haja somente a necessidade de consumir uma API REST.
+
+Nele já foram implementados:
+
+- Configurações para realizar autenticação utilizando o JWT
+- Criação de token
+- Validação de token
+- Autenticação de usuário
+
 # Desenvolvimento
 
 Software requerido:
