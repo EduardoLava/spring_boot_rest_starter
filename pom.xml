@@ -12,7 +12,7 @@
 	<artifactId>spring.boot.rest.starter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring_rest_starter</name>
-	<description>Um projeto para controle financeiro pessoal simples</description>
+	<description>Projeto base</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -104,6 +104,13 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
+		<dependency>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-core</artifactId>
+		    <version>6.5.4</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
